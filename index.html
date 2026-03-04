@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Список фильмов</title>
+</head>
+
+<body>
+    <form id="film-form" class="film-form">
+        <label for="title">Название:</label><br>
+        <input class="film-form__input" type="text" id="title" name="title"><br>
+        <label for="genre">Жанр:</label><br>
+        <input class="film-form__input" type="text" id="genre" name="genre"><br>
+        <label for="releaseYear">Год:</label><br>
+        <input class="film-form__input" type="text" id="releaseYear" name="releaseYear"><br>
+        <input type="checkbox" id="isWatched" name="isWatched">
+        <label for="isWatched">Успели посмотреть?</label><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div class="find">
+        <form class="find-form">
+            <input class="find-form__input" type="text" id="find-title" name="title" placeholder="Название фильма">
+            <input class="find-form__input" type="text" id="find-genre" name="genre" placeholder="Жанр">
+            <input class="find-form__input" type="text" id="find-releaseYear" name="findReleaseYear" placeholder="Год релиза">
+
+            <select class="find-form__select" name="criterion" id="find-watched">
+                <option value="">Все</option>
+                <option value="true">Просмотрено</option>
+                <option value="false">Не просмотрено</option>
+            </select>
+        </form>
+
+        <button class="find__btn btn-delete" id="delete-all-btn" type="reset">Удалить все</button>
+    </div>
+
+    <table id="film-table">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Жанр</th>
+                <th>Год</th>
+                <th>Успели посмотреть?</th>
+                <th>Действие</th>
+            </tr>
+        </thead>
+        <tbody id="film-tbody">
+            <!-- Rows will be inserted here -->
+        </tbody>
+    </table>
+    <script src="main.js"></script>
+</body>
+
+</html>
